@@ -178,6 +178,27 @@ box-shadow:-40px 0 #333;
 animation:close 2s infinite;
 }
 
+.intro-text{
+position:absolute;
+top:20%;
+font-size:32px;
+color:white;
+opacity:0;
+transform:translateY(-20px);
+animation: aparecerTexto 2s ease forwards;
+}
+
+@keyframes aparecerTexto{
+0%{
+opacity:0;
+transform:translateY(-30px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 @keyframes close{
 0%,100%{transform:scale(1,.05);}
 5%,95%{transform:scale(1,1);}
