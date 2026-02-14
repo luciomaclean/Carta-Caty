@@ -178,6 +178,16 @@ box-shadow:-40px 0 #333;
 animation:close 2s infinite;
 }
 
+@keyframes close{
+0%,100%{transform:scale(1,.05);}
+5%,95%{transform:scale(1,1);}
+}
+
+@keyframes beat{
+0%,40%,100%{transform:scale(1) rotate(-45deg);}
+25%,60%{transform:scale(1.1) rotate(-45deg);}
+}
+
 .intro-text{
 position:absolute;
 top:20%;
@@ -197,14 +207,4 @@ transform:translateY(-30px);
 opacity:1;
 transform:translateY(0);
 }
-}
-
-@keyframes close{
-0%,100%{transform:scale(1,.05);}
-5%,95%{transform:scale(1,1);}
-}
-
-@keyframes beat{
-0%,40%,100%{transform:scale(1) rotate(-45deg);}
-25%,60%{transform:scale(1.1) rotate(-45deg);}
 }
