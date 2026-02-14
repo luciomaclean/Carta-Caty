@@ -1,207 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2acac;
-  font-family: 'Mochiy Pop P One', sans-serif;
-  overflow: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-input#open {
-  display: none;
+body{
+    height:100vh;
+    background: linear-gradient(135deg,#cfc3c3,#e6dede);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-.valentines-day-card {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  max-width: 90vw;
-  max-height: 90vw;
-  transform-style: preserve-3d;
-  transform: perspective(2500px);
+.container{
+    text-align:center;
+    position:relative;
 }
 
-.card-front {
-  position: relative;
-  background-color: #fff0f3;
-  width: 300px;
-  height: 300px;
-  transform-origin: left;
-  box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 30px 0 50px rgba(0,0,0,0.3);
-  transition: transform 0.8s ease;
+.titulo1{
+    color:white;
+    font-size:2rem;
 }
 
-.card-front:before {
-  content:"";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  background-color: #d04e4e;
-  top: 10px;
-  left: 10px;
+.titulo2{
+    color:white;
+    font-size:2.5rem;
+    font-weight:bold;
 }
 
-.card-inside {
-  position: absolute;
-  background-color: #fff0f3;
-  width: 300px;
-  height: 300px;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.22), 100px 20px 100px rgba(0,0,0,0.1);
+.titulo3{
+    color:#ff2e2e;
+    font-size:2rem;
+    font-weight:bold;
 }
 
-.open {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  left: 0;
-  top: 0;
-  background-color: transparent;
-  z-index: 6;
-  cursor: pointer;
+.envelope{
+    margin-top:30px;
+    width:180px;
+    height:120px;
+    background:#ff4d6d;
+    position:relative;
+    cursor:pointer;
+    border-radius:6px;
+    animation: aparecer 1.2s ease forwards;
 }
 
-#open:checked ~ .card-front {
-  transform: rotateY(-155deg);
+@keyframes aparecer{
+    from{
+        transform: translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
 }
 
-#open:checked ~ .card-front:before {
-  background-color: #fff0f3;
-  width: 300px;
-  height: 300px;
-  top: 0;
-  left: 0;
+.envelope::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left:90px solid transparent;
+    border-right:90px solid transparent;
+    border-top:60px solid #ff758f;
+    transform-origin:top;
+   erent
+
+Oops — looks like something got cut. Here's the full clean CSS again:
+
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.note {
-  position: relative;
-  width: 200px;
-  height: 150px;
-  background-color: #fff0f3;
-  top: 75px;
-  left: 50px;
-  color: #333;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
+body{
+    height:100vh;
+    background: linear-gradient(135deg,#cfc3c3,#e6dede);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-.note:before, .note:after {
-  position: absolute;
-  content:"";
-  background-color: #ba1c1c;
-  width: 40px;
-  height: 40px;
+.container{
+    text-align:center;
+    position:relative;
 }
 
-.note:before {
-  transform: rotate(-45deg);
-  top: -20px;
-  left: 80px;
+.titulo1{
+    color:white;
+    font-size:2rem;
 }
 
-.note:after {
-  border-radius: 50%;
-  top: -35px;
-  left: 65px;
-  box-shadow: 30px 0 #ba1c1c;
+.titulo2{
+    color:white;
+    font-size:2.5rem;
+    font-weight:bold;
 }
 
-/* TEXTO CENTRAL */
-
-.text-one {
-  position: absolute;
-  top: 40px;
-  width: 300px;
-  text-align: center;
-  line-height: 1.4;
+.titulo3{
+    color:#ff2e2e;
+    font-size:2rem;
+    font-weight:bold;
 }
 
-.line1 {
-  color: white;
-  font-size: 24px;
-  margin: 0;
+.envelope{
+    margin-top:30px;
+    width:180px;
+    height:120px;
+    background:#ff4d6d;
+    position:relative;
+    cursor:pointer;
+    border-radius:6px;
+    animation: aparecer 1.2s ease forwards;
 }
 
-.line2 {
-  color: white;
-  font-size: 26px;
-  margin: 0;
+@keyframes aparecer{
+    from{
+        transform: translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
 }
 
-.line3 {
-  color: #d04e4e;
-  font-size: 28px;
-  margin: 0;
+.envelope::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left:90px solid transparent;
+    border-right:90px solid transparent;
+    border-top:60px solid #ff758f;
+    transform-origin:top;
+    transition:0.6s;
 }
 
-/* CORAZON */
-
-.heart {
-  position: relative;
-  background-color: #d04e4e;
-  height: 60px;
-  width: 60px;
-  top: 180px;
-  left: 120px;
-  transform: rotate(-45deg);
-  animation: beat .8s infinite;
+.envelope:hover::before{
+    transform: rotateX(180deg);
 }
 
-.heart:before, .heart:after {
-  content:"";
-  background-color: #d04e4e;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  position: absolute;
+.letter{
+    position:absolute;
+    width:160px;
+    height:100px;
+    background:white;
+    top:10px;
+    left:10px;
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    transform:translateY(40px);
+    opacity:0;
+    transition:0.6s;
 }
 
-.heart:before {
-  top: -30px;
+.envelope:hover .letter{
+    transform:translateY(-60px);
+    opacity:1;
 }
 
-.heart:after {
-  left: 30px;
+.confetti{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:red;
+    top:-10px;
+    animation: caer linear infinite;
 }
 
-.smile {
-  position: absolute;
-  width: 30px;
-  height: 15px;
-  background-color: #333;
-  border-radius: 0 0 100px 100px;
-  top: 200px;
-  left: 135px;
-}
-
-.eyes {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #333;
-  width: 10px;
-  height: 10px;
-  top: 190px;
-  left: 165px;
-  box-shadow: -40px 0 #333;
-  animation: close 2s infinite;
-}
-
-@keyframes close {
-    0%,100% { transform: scale(1,.05); }
-    5%,95% { transform: scale(1,1); }
-}
-
-@keyframes beat {
-  0%,40%,100% { transform: scale(1) rotate(-45deg); }
-  25%,60% { transform: scale(1.1) rotate(-45deg); }
+@keyframes caer{
+    from{
+        transform:translateY(-100vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(100vh) rotate(360deg);
+    }
 }
