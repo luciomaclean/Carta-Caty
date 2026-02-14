@@ -45,20 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
         confetti({
-            particleCount: 120,
-            spread: 70,
-            origin: { y: 0.6 }
+            particleCount:120,
+            spread:70,
+            origin:{ y:0.6 }
         });
-    }, 500);
+    },600);
 
     const checkbox = document.getElementById("open");
 
     checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
+        if(checkbox.checked){
             confetti({
-                particleCount: 200,
-                spread: 100,
-                origin: { y: 0.7 }
+                particleCount:200,
+                spread:100,
+                origin:{ y:0.7 }
             });
         }
     });
@@ -69,5 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
