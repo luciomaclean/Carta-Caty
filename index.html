@@ -39,19 +39,27 @@
 
 <script>
 
-const checkbox = document.getElementById("open");
+document.addEventListener("DOMContentLoaded", () => {
 
-checkbox.addEventListener("change", () => {
-
-    if (checkbox.checked) {
-
+    setTimeout(() => {
         confetti({
-            particleCount: 150,
-            spread: 80,
+            particleCount: 120,
+            spread: 70,
             origin: { y: 0.6 }
         });
+    }, 500);
 
-    }
+    const checkbox = document.getElementById("open");
+
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.7 }
+            });
+        }
+    });
 
 });
 
@@ -59,3 +67,4 @@ checkbox.addEventListener("change", () => {
 
 </body>
 </html>
+
